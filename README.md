@@ -12,6 +12,8 @@
 
 Severance is **not just another project with CAM installed** it's the **development repository** that deploys to your global `~/.claude/` directory. When you modify CAM hooks, update the core engine, or refine your AI agent configurations in Severance, those changes propagate to every project on your machine.
 
+![Diagram](https://image.prntscr.com/image/NRZPNEDhRNuTBChupQq_5w.png)
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           THE SEVERANCE MODEL                               │
@@ -234,6 +236,8 @@ Cursor reads `.cursor/rules/cursor-rules.mdc` which provides:
 ## The Hook-Based Memory System
 
 ### How Knowledge Accumulates
+
+![Diagram](https://image.prntscr.com/image/HYiH9hv3Toyntrj07y5UEQ.png)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -459,6 +463,8 @@ severance/
 ### Purpose: Single Source of Truth
 
 The `.ai/` directory is a **structured documentation framework** that serves as the **single source of truth** for all project knowledge. Instead of scattering documentation across READMEs, inline comments, and agent-specific files, everything lives in one canonical location.
+
+![Diagram](https://image.prntscr.com/image/IgdUSh4URoS6ekn7UjSZrA.png)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -710,6 +716,8 @@ A: Yes. Modify `cam_core.py` to use OpenAI, Cohere, or local models. The interfa
 
 ---
 
+![Diagram](https://image.prntscr.com/image/tJ3kSIPOSRSLBw6pLR0VUQ.png)
+
 #
 # Notice
 I realize this may not be the best way to go about it. I don't know if it's placebo, but it seems to help out a lot. I've only been able to test it in a few projects: Severance, a multi-API aggregate routing tool, and case study projects (non-complex) & it seems to steer the models in the right direction with very little context. 
@@ -718,12 +726,13 @@ I intended this project to essentially query/read/write to the memory layer any 
 
 I haven't been able to create evals for token consumption just yet, for right now in the LLM space, I think we are at the point of determining what is more viable for agentic development, how a user/consumer orchestrates an agent to utilize tools or the tools/features/capabilities that a agent is shipped with. 
 
-The latest of implementation of Opus 4.5 and the multi-layer code execution feature for MCP server tool calling is a step in the 'right' abstraction of token performant models, but will it execute/implement shippable/functioning code?
+`The latest of implementation of Opus 4.5 and the multi-layer code execution feature for MCP server tool calling is a step in the 'right' abstraction of token performant models, so part of the purpose of open sourcing this project is to see if this could be the abstraction that AI engineers/software developers are looking for when it comes to a persistent and contextually aware agent/llm model.`
 
 #
 # Disclaimer
-Please backup your global ~/.claude/ folder.
-Please backup your project .claude folder, CLAUDE.md, GEMINI.md, & .cursor folder. **Initializing will overwrite files.** 
+> [!WARNING]
+> `Please backup your global ~/.claude/ folder, .claude folder, CLAUDE.md, GEMINI.md, & .cursor folder. Initializing will overwrite files.
+I suggest "testing" CAM infra in a test project to understand how it works, play around a bit with it and move on from there.`
 
 If you have custom workflows/directions/specific instructions in any of these files, it's advised to append it to the agent related .md files that are scaffolded post initialization. 
 
@@ -731,7 +740,13 @@ One last thing, i'm not comfortable with the state that it's at right now, but w
 
 
 #
-# Credit
-`.ai scaffolding system` | [Dev](https://github.com/andrasbacsai) | [Repo of Inspiration](https://github.com/coollabsio/coolify)
+## Credit
+`.ai scaffolding system` | [Dev](https://github.com/andrasbacsai) [Repo of Inspiration](https://github.com/coollabsio/coolify)
+
+#
+## Mentions
+`Anthropic Claude` | [Meet Opus](https://www.anthropic.com/news/claude-opus-4-5)
+
+`Google Gemini` | [Meet Gemini](https://ai.google.dev/gemini-api/docs/gemini-3?thinking=high)
 
  
