@@ -1,6 +1,6 @@
  # Cognitive Conversations with Claude
 > [!IMPORTANT] 
-[CAM Interface Project Overview](https://github.com/blas0/CAM-Interface/blob/main/README.md)
+Please see Severance, the open-sourced MVP of what came from this 'abstraction'. [Severance](https://github.com/blas0/Severance)
 
 
 ## Abstract
